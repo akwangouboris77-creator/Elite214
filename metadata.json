@@ -1,0 +1,5 @@
+{
+  "name": "L’ÉLITE 241",
+  "description": "Application de défis scolaires gabonais avec redistribution de gains via Mobile Money.",
+  "requestFramePermissions": ["camera", "microphone"]
+}

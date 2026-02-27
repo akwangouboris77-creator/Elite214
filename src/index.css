@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gabon-green: #009E60;
+  --color-gabon-yellow: #FCD116;
+  --color-gabon-blue: #3A75C4;
+  --color-elite-black: #0A0A0A;
+  --color-elite-cream: #FDFCF8;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-elite-cream text-elite-black;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .brutalist-card {
+    @apply bg-white border-[3px] border-elite-black shadow-[8px_8px_0px_0px_rgba(10,10,10,1)] transition-all;
+  }
+  
+  .brutalist-button-primary {
+    @apply bg-gabon-blue text-white border-[3px] border-elite-black shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:scale-95 transition-all font-black uppercase tracking-widest;
+  }
+
+  .brutalist-button-accent {
+    @apply bg-gabon-yellow text-elite-black border-[3px] border-elite-black shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:scale-95 transition-all font-black uppercase tracking-widest;
+  }
+
+  .brutalist-button-success {
+    @apply bg-gabon-green text-white border-[3px] border-elite-black shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:scale-95 transition-all font-black uppercase tracking-widest;
+  }
+}
